@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.buy_ticket.BuyActivity">
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:tooltipText="Nome do Filme"
+            android:hint="Nome do Filme"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:enabled="false"
+            android:tooltipText="Valor do ingresso"
+            app:layout_constraintEnd_toEndOf="@+id/et_title"
+            app:layout_constraintStart_toStartOf="@id/et_title"
+            app:layout_constraintTop_toBottomOf="@id/et_title" />
+
+        <EditText
+            android:id="@+id/et_credito"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Cartão de crédito"
+            android:tooltipText="Cartão de crédito"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/et_valor"
+            app:layout_constraintStart_toStartOf="@id/et_valor"
+            app:layout_constraintTop_toBottomOf="@id/et_valor" />
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintVertical_bias="1"
+            android:text="Comprar Ingresso"
+            android:foregroundTint="@color/orange_red"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
