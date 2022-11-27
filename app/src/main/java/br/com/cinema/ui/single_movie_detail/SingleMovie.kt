@@ -74,9 +74,8 @@ class SingleMovie : AppCompatActivity() {
         findViewById<TextView>(R.id.movie_title).text = it.title
         findViewById<TextView>(R.id.movie_tagline).text = it.tagline
         findViewById<TextView>(R.id.movie_release_date).text = it.release_date
-        Log.d(TAG, "bindUI: " + it.rating )
-        findViewById<TextView>(R.id.movie_rating).text = it.rating.toString()
-        findViewById<TextView>(R.id.movie_runtime).text = it.runtime.toString() + " minutes"
+        findViewById<TextView>(R.id.movie_rating).text = it.vote_average.toString()
+        findViewById<TextView>(R.id.movie_runtime).text = it.runtime.toString() + " minutos"
         findViewById<TextView>(R.id.movie_overview).text = it.overview
 
         val formatCurrency = NumberFormat.getCurrencyInstance(Locale.US)

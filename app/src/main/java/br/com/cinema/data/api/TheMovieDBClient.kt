@@ -15,12 +15,8 @@ const val POST_PER_PAGE = 20
 
 
 object TheMovieDBClient {
-
     fun getClient(): TheMovieDBInterface {
-
         val requestInterceptor = Interceptor { chain ->
-            // Interceptor take only one argument which is a lambda function so parenthesis can be omitted
-
             val url = chain.request()
                 .url()
                 .newBuilder()
@@ -33,7 +29,7 @@ object TheMovieDBClient {
                 .url(url)
                 .build()
 
-            return@Interceptor chain.proceed(request)   //explicitly return a value from whit @ annotation. lambda always returns the value of the last expression implicitly
+            return@Interceptor chain.proceed(request)
         }
 
         val okHttpClient = OkHttpClient.Builder()
